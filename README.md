@@ -4,12 +4,9 @@
 
 ---
 
-## 🌐 Live Website
+## 🌐 Live 
 
-🔗 **Portfolio:**  
-https://your-portfolio-live-url.com
-
-> The portfolio is currently under active development.
+https://aditya-portfolio-b8nh.onrender.com
 
 ---
 
