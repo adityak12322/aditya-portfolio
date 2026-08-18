@@ -63,8 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const hero = document.querySelector(".hero");
     const codeCard = document.querySelector(".code-card");
 
+   if (hero && codeCard) {
     hero.addEventListener("mousemove", (event) => {
-
         const x = event.clientX;
         const y = event.clientY;
 
@@ -79,17 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
             rotateX(${3 - moveY}deg)
             translateY(-5px)
         `;
-
     });
-
 
     hero.addEventListener("mouseleave", () => {
-
         codeCard.style.transform =
             "rotateY(-8deg) rotateX(3deg)";
-
     });
-
+}
 });
 /* =========================================
    4. CUSTOM CURSOR
