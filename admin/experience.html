@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Experience — Aditya Admin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css">
+
+</head>
+
+
+<body>
+
+<main class="admin-editor">
+
+
+    <!-- HEADER -->
+
+    <header class="editor-header">
+
+        <div>
+
+            <p class="dashboard-label">
+                PORTFOLIO ADMIN
+            </p>
+
+            <h1>
+                Experience
+            </h1>
+
+            <p class="editor-subtitle">
+                Manage internships, experience,
+                training and freelance work.
+            </p>
+
+        </div>
+
+
+        <div class="editor-header-actions">
+
+            <a
+                href="../index.html"
+                target="_blank"
+                class="editor-view">
+
+                View Portfolio ↗
+
+            </a>
+
+
+            <a
+                href="dashboard.html"
+                class="editor-back">
+
+                ← Dashboard
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- FORM -->
+
+    <form
+        id="experienceForm"
+        class="editor-form">
+
+
+        <div class="editor-section-title">
+
+            <span>
+                01
+            </span>
+
+            <div>
+
+                <h2 id="formTitle">
+                    Add Experience
+                </h2>
+
+                <p>
+                    Add your professional experience.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <input
+            type="hidden"
+            id="experienceId">
+
+
+        <!-- TYPE -->
+
+        <div class="editor-field">
+
+            <label for="type">
+                Experience Type
+            </label>
+
+            <select id="type">
+
+                <option value="internship">
+                    Internship
+                </option>
+
+                <option value="experience">
+                    Work Experience
+                </option>
+
+                <option value="training">
+                    Training
+                </option>
+
+                <option value="freelance">
+                    Freelance
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- COMPANY -->
+
+        <div class="editor-field">
+
+            <label for="company">
+                Company / Organization
+            </label>
+
+            <input
+                type="text"
+                id="company"
+                placeholder="Company name"
+                required>
+
+        </div>
+
+
+        <!-- ROLE -->
+
+        <div class="editor-field">
+
+            <label for="role">
+                Role
+            </label>
+
+            <input
+                type="text"
+                id="role"
+                placeholder="Data Analyst Intern"
+                required>
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="editor-field">
+
+            <label for="location">
+                Location
+            </label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Noida / Remote">
+
+        </div>
+
+
+        <!-- DATES -->
+
+        <div class="editor-two-column">
+
+
+            <div class="editor-field">
+
+                <label for="startDate">
+                    Start Date
+                </label>
+
+                <input
+                    type="month"
+                    id="startDate">
+
+            </div>
+
+
+            <div class="editor-field">
+
+                <label for="endDate">
+                    End Date
+                </label>
+
+                <input
+                    type="month"
+                    id="endDate">
+
+            </div>
+
+        </div>
+
+
+        <!-- CURRENT -->
+
+        <label class="editor-toggle">
+
+            <input
+                type="checkbox"
+                id="current">
+
+            <span class="toggle-content">
+
+                <strong>
+                    Currently working here
+                </strong>
+
+                <small>
+                    Show "Present" instead of an end date.
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="editor-field">
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                rows="7"
+                placeholder="Describe your responsibilities, work and achievements."></textarea>
+
+        </div>
+
+
+        <!-- TECHNOLOGIES -->
+
+        <div class="editor-field">
+
+            <label for="technologies">
+                Technologies / Skills
+            </label>
+
+            <input
+                type="text"
+                id="technologies"
+                placeholder="SQL, Excel, Power BI">
+
+            <small>
+                Separate items with commas.
+            </small>
+
+        </div>
+
+
+        <!-- CERTIFICATE -->
+
+        <div class="editor-field">
+
+            <label for="certificateUrl">
+                Internship / Experience Certificate
+            </label>
+
+            <input
+                type="url"
+                id="certificateUrl"
+                placeholder="Google Drive / PDF / Image link">
+
+            <small>
+                Add your public Google Drive or hosted document link.
+            </small>
+
+        </div>
+
+
+        <!-- LOR -->
+
+        <div class="editor-field">
+
+            <label for="lorUrl">
+                Letter of Recommendation (LOR)
+            </label>
+
+            <input
+                type="url"
+                id="lorUrl"
+                placeholder="Google Drive / PDF link">
+
+        </div>
+
+
+        <!-- ORDER -->
+
+        <div class="editor-field">
+
+            <label for="order">
+                Display Order
+            </label>
+
+            <input
+                type="number"
+                id="order"
+                value="0"
+                min="0">
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div
+            id="experienceMessage"
+            class="save-message">
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="editor-actions">
+
+            <button
+                type="button"
+                id="cancelEdit"
+                class="cancel-button"
+                style="display:none;">
+
+                Cancel Edit
+
+            </button>
+
+
+            <button
+                type="submit"
+                id="saveButton"
+                class="save-button">
+
+                <span>
+                    Add Experience
+                </span>
+
+                <b>
+                    +
+                </b>
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+
+
+    <!-- EXISTING EXPERIENCE -->
+
+    <section class="project-manager">
+
+
+        <div class="editor-section-title">
+
+            <span>
+                02
+            </span>
+
+            <div>
+
+                <h2>
+                    Your Experience
+                </h2>
+
+                <p>
+                    Saved experience records.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="experienceList"
+            class="admin-project-list">
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="experience.js"></script>
+
+</body>
+
+</html>

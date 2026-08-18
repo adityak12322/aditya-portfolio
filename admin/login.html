@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Login — Aditya</title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="login-page">
+
+        <div class="login-glow"></div>
+
+
+        <section class="login-card">
+
+            <div class="login-brand">
+
+                <div class="login-logo">
+                    ADITYA<span>.</span>
+                </div>
+
+                <p>
+                    PORTFOLIO ADMIN
+                </p>
+
+            </div>
+
+
+            <div class="login-heading">
+
+                <span>
+                    SECURE ACCESS
+                </span>
+
+                <h1>
+                    Welcome back.
+                </h1>
+
+                <p>
+                    Sign in to manage your portfolio.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="admin@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <div class="password-label">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                    </div>
+
+                    <div class="password-input">
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            aria-label="Show password">
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <div
+                    id="loginError"
+                    class="login-error">
+                </div>
+
+
+                <!-- LOGIN -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton">
+
+                    <span>
+                        Sign in
+                    </span>
+
+                    <b>
+                        →
+                    </b>
+
+                </button>
+
+
+            </form>
+
+
+            <a
+                href="../index.html"
+                class="back-home">
+                ← Back to portfolio
+            </a>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Projects — Aditya Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css">
+
+</head>
+
+
+<body>
+
+<main class="admin-editor">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <header class="editor-header">
+
+        <div>
+
+            <p class="dashboard-label">
+                PORTFOLIO ADMIN
+            </p>
+
+            <h1>
+                Projects
+            </h1>
+
+            <p class="editor-subtitle">
+                Add, edit and manage your portfolio projects.
+            </p>
+
+        </div>
+
+
+        <div class="editor-header-actions">
+
+            <a
+                href="../index.html"
+                target="_blank"
+                class="editor-view">
+                View Portfolio ↗
+            </a>
+
+            <a
+                href="dashboard.html"
+                class="editor-back">
+                ← Dashboard
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================================
+         PROJECT FORM
+    ================================================== -->
+
+    <form
+        id="projectForm"
+        class="editor-form">
+
+
+        <div class="editor-section-title">
+
+            <span>
+                01
+            </span>
+
+            <div>
+
+                <h2 id="formTitle">
+                    Add Project
+                </h2>
+
+                <p>
+                    Create or update a project for your portfolio.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- HIDDEN EDIT ID -->
+
+        <input
+            type="hidden"
+            id="projectId">
+
+
+        <!-- PROJECT TITLE -->
+
+        <div class="editor-field">
+
+            <label for="title">
+                Project Title
+            </label>
+
+            <input
+                type="text"
+                id="title"
+                placeholder="e.g. Sales Analytics Dashboard"
+                required>
+
+        </div>
+
+
+        <!-- CATEGORY -->
+
+        <div class="editor-field">
+
+            <label for="category">
+                Category
+            </label>
+
+            <select id="category">
+
+                <option value="data">
+                    Data Analytics
+                </option>
+
+                <option value="development">
+                    Development
+                </option>
+
+                <option value="testing">
+                    QA / Testing
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="editor-field">
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                rows="6"
+                placeholder="Explain what you built, the problem it solves and what you worked on."
+                required></textarea>
+
+        </div>
+
+
+        <!-- TECH STACK -->
+
+        <div class="editor-field">
+
+            <label for="techStack">
+                Tech Stack
+            </label>
+
+            <input
+                type="text"
+                id="techStack"
+                placeholder="SQL, Excel, Power BI">
+
+            <small>
+                Separate technologies with commas.
+            </small>
+
+        </div>
+
+
+        <!-- IMAGE -->
+
+        <div class="editor-field">
+
+            <label for="imageUrl">
+                Project Image URL
+            </label>
+
+            <input
+                type="url"
+                id="imageUrl"
+                placeholder="https://...">
+
+        </div>
+
+
+        <!-- LINKS -->
+
+        <div class="editor-two-column">
+
+
+            <div class="editor-field">
+
+                <label for="liveUrl">
+                    Live Demo URL
+                </label>
+
+                <input
+                    type="url"
+                    id="liveUrl"
+                    placeholder="https://...">
+
+            </div>
+
+
+            <div class="editor-field">
+
+                <label for="githubUrl">
+                    GitHub URL
+                </label>
+
+                <input
+                    type="url"
+                    id="githubUrl"
+                    placeholder="https://github.com/...">
+
+            </div>
+
+        </div>
+
+
+        <!-- ORDER -->
+
+        <div class="editor-field">
+
+            <label for="order">
+                Display Order
+            </label>
+
+            <input
+                type="number"
+                id="order"
+                value="0"
+                min="0">
+
+        </div>
+
+
+        <!-- FEATURED -->
+
+        <label class="editor-toggle">
+
+            <input
+                type="checkbox"
+                id="featured">
+
+            <span class="toggle-content">
+
+                <strong>
+                    Featured Project
+                </strong>
+
+                <small>
+                    Highlight this project on the portfolio.
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <!-- MESSAGE -->
+
+        <div
+            id="projectMessage"
+            class="save-message"
+            role="status"
+            aria-live="polite">
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="editor-actions">
+
+            <button
+                type="button"
+                id="cancelEditButton"
+                class="cancel-button"
+                style="display: none;">
+
+                Cancel Edit
+
+            </button>
+
+
+            <button
+                type="submit"
+                class="save-button"
+                id="projectSaveButton">
+
+                <span>
+                    Add Project
+                </span>
+
+                <b>
+                    +
+                </b>
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+
+
+    <!-- =================================================
+         PROJECT LIST
+    ================================================== -->
+
+    <section class="project-manager">
+
+
+        <div class="editor-section-title">
+
+            <span>
+                02
+            </span>
+
+            <div>
+
+                <h2>
+                    Your Projects
+                </h2>
+
+                <p>
+                    Projects already saved in your database.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="projectsList"
+            class="admin-project-list">
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="projects.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Education — Aditya Admin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css">
+
+</head>
+
+
+<body>
+
+<main class="admin-editor">
+
+
+    <!-- HEADER -->
+
+    <header class="editor-header">
+
+        <div>
+
+            <p class="dashboard-label">
+                PORTFOLIO ADMIN
+            </p>
+
+            <h1>
+                Education
+            </h1>
+
+            <p class="editor-subtitle">
+                Manage your academic qualifications.
+            </p>
+
+        </div>
+
+
+        <div class="editor-header-actions">
+
+            <a
+                href="../index.html"
+                target="_blank"
+                class="editor-view">
+
+                View Portfolio ↗
+
+            </a>
+
+
+            <a
+                href="dashboard.html"
+                class="editor-back">
+
+                ← Dashboard
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- FORM -->
+
+    <form
+        id="educationForm"
+        class="editor-form">
+
+
+        <div class="editor-section-title">
+
+            <span>
+                01
+            </span>
+
+            <div>
+
+                <h2 id="formTitle">
+                    Add Education
+                </h2>
+
+                <p>
+                    Add an academic qualification.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <input
+            type="hidden"
+            id="educationId">
+
+
+        <!-- QUALIFICATION -->
+
+        <div class="editor-field">
+
+            <label for="qualification">
+                Degree / Qualification
+            </label>
+
+            <input
+                type="text"
+                id="qualification"
+                placeholder="B.Tech"
+                required>
+
+        </div>
+
+
+        <!-- SPECIALIZATION -->
+
+        <div class="editor-field">
+
+            <label for="specialization">
+                Field / Specialization
+            </label>
+
+            <input
+                type="text"
+                id="specialization"
+                placeholder="Computer Science & Information Technology">
+
+        </div>
+
+
+        <!-- INSTITUTION -->
+
+        <div class="editor-field">
+
+            <label for="institution">
+                Institution
+            </label>
+
+            <input
+                type="text"
+                id="institution"
+                placeholder="Dronacharya Group of Institutions"
+                required>
+
+        </div>
+
+
+        <!-- UNIVERSITY -->
+
+        <div class="editor-field">
+
+            <label for="university">
+                University / Board
+            </label>
+
+            <input
+                type="text"
+                id="university"
+                placeholder="AKTU">
+
+        </div>
+
+
+        <!-- LOCATION -->
+
+        <div class="editor-field">
+
+            <label for="location">
+                Location
+            </label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Greater Noida">
+
+        </div>
+
+
+        <!-- YEARS -->
+
+        <div class="editor-two-column">
+
+
+            <div class="editor-field">
+
+                <label for="startYear">
+                    Start Year
+                </label>
+
+                <input
+                    type="text"
+                    id="startYear"
+                    placeholder="2022">
+
+            </div>
+
+
+            <div class="editor-field">
+
+                <label for="endYear">
+                    End Year
+                </label>
+
+                <input
+                    type="text"
+                    id="endYear"
+                    placeholder="2026">
+
+            </div>
+
+        </div>
+
+
+        <!-- STATUS -->
+
+        <div class="editor-field">
+
+            <label for="status">
+                Status
+            </label>
+
+            <input
+                type="text"
+                id="status"
+                placeholder="Graduate">
+
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="editor-field">
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                rows="6"
+                placeholder="Short academic description..."></textarea>
+
+        </div>
+
+
+        <!-- DOCUMENT -->
+
+        <div class="editor-field">
+
+            <label for="documentUrl">
+                Degree / Academic Document URL
+            </label>
+
+            <input
+                type="url"
+                id="documentUrl"
+                placeholder="Google Drive / PDF link">
+
+            <small>
+                Optional — add your degree, marksheet or academic document link.
+            </small>
+
+        </div>
+
+
+        <!-- ORDER -->
+
+        <div class="editor-field">
+
+            <label for="order">
+                Display Order
+            </label>
+
+            <input
+                type="number"
+                id="order"
+                value="0"
+                min="0">
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div
+            id="educationMessage"
+            class="save-message">
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="editor-actions">
+
+            <button
+                type="button"
+                id="cancelEdit"
+                class="cancel-button"
+                style="display:none;">
+
+                Cancel Edit
+
+            </button>
+
+
+            <button
+                type="submit"
+                id="saveButton"
+                class="save-button">
+
+                <span>
+                    Add Education
+                </span>
+
+                <b>
+                    +
+                </b>
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+
+
+    <!-- SAVED EDUCATION -->
+
+    <section class="project-manager">
+
+
+        <div class="editor-section-title">
+
+            <span>
+                02
+            </span>
+
+            <div>
+
+                <h2>
+                    Your Education
+                </h2>
+
+                <p>
+                    Academic records saved in your database.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="educationList"
+            class="admin-project-list">
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<script src="education.js"></script>
+
+</body>
+
+</html>

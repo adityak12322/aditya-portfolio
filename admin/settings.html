@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Settings — Aditya Admin
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css">
+
+</head>
+
+
+<body>
+
+<main class="admin-editor">
+
+
+    <!-- HEADER -->
+
+    <header class="editor-header">
+
+        <div>
+
+            <p class="dashboard-label">
+                PORTFOLIO ADMIN
+            </p>
+
+            <h1>
+                Settings
+            </h1>
+
+            <p class="editor-subtitle">
+                Control your portfolio's general settings.
+            </p>
+
+        </div>
+
+
+        <div class="editor-header-actions">
+
+            <a
+                href="../index.html"
+                target="_blank"
+                class="editor-view">
+
+                View Portfolio ↗
+
+            </a>
+
+
+            <a
+                href="dashboard.html"
+                class="editor-back">
+
+                ← Dashboard
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- SETTINGS FORM -->
+
+    <form
+        id="settingsForm"
+        class="editor-form">
+
+
+        <!-- =================================================
+             GENERAL
+        ================================================== -->
+
+        <div class="editor-section-title">
+
+            <span>
+                01
+            </span>
+
+            <div>
+
+                <h2>
+                    General
+                </h2>
+
+                <p>
+                    Basic portfolio information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="editor-field">
+
+            <label for="portfolioTitle">
+                Portfolio Title
+            </label>
+
+            <input
+                type="text"
+                id="portfolioTitle"
+                placeholder="Aditya Kumar | Data Analyst • Developer • QA">
+
+        </div>
+
+
+        <div class="editor-field">
+
+            <label for="availabilityText">
+                Availability Message
+            </label>
+
+            <textarea
+                id="availabilityText"
+                rows="4"
+                placeholder="Open to Data Analyst, Development and QA opportunities."></textarea>
+
+        </div>
+
+
+
+        <!-- =================================================
+             AVAILABILITY
+        ================================================== -->
+
+        <div class="editor-section-title">
+
+            <span>
+                02
+            </span>
+
+            <div>
+
+                <h2>
+                    Availability
+                </h2>
+
+                <p>
+                    Control your recruiter-facing availability status.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <label class="editor-toggle">
+
+            <input
+                type="checkbox"
+                id="availableForWork">
+
+            <span class="toggle-content">
+
+                <strong>
+                    Currently available for work
+                </strong>
+
+                <small>
+                    Show that you are open to new opportunities.
+                </small>
+
+            </span>
+
+        </label>
+
+
+
+        <!-- =================================================
+             CONTACT VISIBILITY
+        ================================================== -->
+
+        <div class="editor-section-title">
+
+            <span>
+                03
+            </span>
+
+            <div>
+
+                <h2>
+                    Contact Visibility
+                </h2>
+
+                <p>
+                    Choose which contact details are visible.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <label class="editor-toggle">
+
+            <input
+                type="checkbox"
+                id="showEmail">
+
+            <span class="toggle-content">
+
+                <strong>
+                    Show Email
+                </strong>
+
+                <small>
+                    Display your email on the public portfolio.
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <label class="editor-toggle">
+
+            <input
+                type="checkbox"
+                id="showPhone">
+
+            <span class="toggle-content">
+
+                <strong>
+                    Show Phone
+                </strong>
+
+                <small>
+                    Display your phone number on the public portfolio.
+                </small>
+
+            </span>
+
+        </label>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <div class="editor-section-title">
+
+            <span>
+                04
+            </span>
+
+            <div>
+
+                <h2>
+                    Footer
+                </h2>
+
+                <p>
+                    Customize the copyright year.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="editor-field">
+
+            <label for="footerYear">
+                Copyright Year
+            </label>
+
+            <input
+                type="text"
+                id="footerYear"
+                placeholder="2026">
+
+        </div>
+
+
+
+        <!-- MESSAGE -->
+
+        <div
+            id="settingsMessage"
+            class="save-message">
+
+        </div>
+
+
+
+        <!-- SAVE -->
+
+        <button
+            type="submit"
+            id="saveButton"
+            class="save-button">
+
+            <span>
+                Save Settings
+            </span>
+
+            <b>
+                ✓
+            </b>
+
+        </button>
+
+
+    </form>
+
+
+</main>
+
+
+<script src="settings.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1732 @@
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --background: #070707;
+
+    --surface: #101010;
+
+    --surface-light: #171717;
+
+    --text: #ffffff;
+
+    --muted: #8c8c8c;
+
+    --border:
+        rgba(255, 255, 255, 0.1);
+
+    --accent: #8b5cf6;
+
+    --accent-light: #a78bfa;
+
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--background);
+
+    color:
+        var(--text);
+
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.login-page {
+
+    position: relative;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+}
+
+
+/* =====================================================
+   GLOW
+===================================================== */
+
+.login-glow {
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        var(--accent);
+
+    opacity: 0.08;
+
+    border-radius: 50%;
+
+    filter: blur(130px);
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.login-card {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        100%,
+        430px
+    );
+
+    padding: 42px;
+
+    background:
+        rgba(16, 16, 16, 0.9);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 35px 100px
+        rgba(0, 0, 0, 0.6);
+
+    backdrop-filter:
+        blur(20px);
+
+    animation:
+        loginEnter
+        0.6s
+        ease
+        forwards;
+
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.login-brand {
+    margin-bottom: 50px;
+}
+
+.login-logo {
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+.login-logo span {
+    color:
+        var(--accent);
+}
+
+.login-brand p {
+
+    color:
+        var(--muted);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 2px;
+
+    margin-top: 7px;
+
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.login-heading span {
+
+    color:
+        var(--accent-light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+
+}
+
+.login-heading h1 {
+
+    font-size: 2.5rem;
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+
+    margin:
+        12px
+        0;
+
+}
+
+.login-heading p {
+
+    color:
+        var(--muted);
+
+    font-size: 0.85rem;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group {
+
+    margin-bottom: 22px;
+
+}
+
+.form-group label {
+
+    display: block;
+
+    color:
+        #d4d4d4;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    height: 50px;
+
+    padding:
+        0
+        15px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background:
+        #0b0b0b;
+
+    color:
+        #ffffff;
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.form-group input::placeholder {
+
+    color:
+        #555;
+
+}
+
+
+.form-group input:focus {
+
+    border-color:
+        rgba(139, 92, 246, 0.7);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(139, 92, 246, 0.08);
+
+}
+
+
+/* =====================================================
+   PASSWORD
+===================================================== */
+
+.password-input {
+
+    position: relative;
+
+}
+
+.password-input input {
+
+    padding-right: 65px;
+
+}
+
+.password-input button {
+
+    position: absolute;
+
+    top: 50%;
+    right: 12px;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        var(--accent-light);
+
+    font-size: 0.65rem;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.login-error {
+
+    min-height: 20px;
+
+    color:
+        #f87171;
+
+    font-size: 0.72rem;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.login-button {
+
+    width: 100%;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding:
+        0
+        18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        var(--accent);
+
+    color:
+        #ffffff;
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+.login-button:hover {
+
+    background:
+        var(--accent-light);
+
+    transform:
+        translateY(-2px);
+
+}
+
+.login-button:disabled {
+
+    opacity: 0.6;
+
+    cursor:
+        not-allowed;
+
+    transform: none;
+
+}
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+.back-home {
+
+    display: block;
+
+    width: fit-content;
+
+    margin:
+        28px
+        auto
+        0;
+
+    color:
+        var(--muted);
+
+    font-size: 0.7rem;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+.back-home:hover {
+
+    color:
+        var(--accent-light);
+
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes loginEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .login-page {
+
+        padding:
+            18px;
+
+    }
+
+    .login-card {
+
+        padding:
+            30px
+            22px;
+
+        border-radius:
+            14px;
+
+    }
+
+    .login-brand {
+
+        margin-bottom:
+            38px;
+
+    }
+
+    .login-heading h1 {
+
+        font-size:
+            2.1rem;
+
+    }
+
+}
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard {
+
+    width: min(
+        1200px,
+        calc(100% - 50px)
+    );
+
+    margin: 0 auto;
+
+    padding:
+        60px
+        0;
+
+}
+
+
+/* HEADER */
+
+.dashboard-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 50px;
+
+    padding-bottom: 30px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+}
+
+
+.dashboard-label {
+
+    color:
+        var(--accent-light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.dashboard-header h1 {
+
+    font-size: 3.5rem;
+
+    letter-spacing: -2px;
+
+}
+
+
+.dashboard-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.dashboard-actions a,
+.dashboard-actions button {
+
+    padding:
+        10px
+        15px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 7px;
+
+    background:
+        transparent;
+
+    color:
+        var(--text);
+
+    font-family: inherit;
+
+    font-size: 0.7rem;
+
+    cursor: pointer;
+
+}
+
+
+.dashboard-actions a:hover,
+.dashboard-actions button:hover {
+
+    border-color:
+        var(--accent);
+
+}
+
+
+/* GRID */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 15px;
+
+}
+
+
+.dashboard-card {
+
+    min-height: 190px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 25px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.dashboard-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(
+            139,
+            92,
+            246,
+            0.45
+        );
+
+}
+
+
+.dashboard-card > span {
+
+    color:
+        var(--accent-light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.65rem;
+
+}
+
+
+.dashboard-card h2 {
+
+    font-size: 1.3rem;
+
+    margin-bottom: 7px;
+
+}
+
+
+.dashboard-card p {
+
+    color:
+        var(--muted);
+
+    font-size: 0.75rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .dashboard-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard {
+
+        width:
+            calc(100% - 30px);
+
+        padding:
+            35px
+            0;
+
+    }
+
+    .dashboard-header {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+    .dashboard-header h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .dashboard-actions {
+
+        width: 100%;
+
+    }
+
+    .dashboard-actions a,
+    .dashboard-actions button {
+
+        flex: 1;
+
+        text-align: center;
+
+    }
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+/* =====================================================
+   ADMIN EDITOR
+===================================================== */
+
+.admin-editor {
+
+    width: min(
+        900px,
+        calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+
+    padding: 50px 0 80px;
+
+}
+
+
+.editor-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 30px;
+
+    margin-bottom: 35px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+}
+
+
+.editor-header h1 {
+
+    font-size: 3rem;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.editor-back {
+
+    color:
+        var(--muted);
+
+    font-size: 0.75rem;
+
+}
+
+
+.editor-form {
+
+    padding: 30px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 14px;
+
+}
+
+
+.editor-field {
+
+    margin-bottom: 24px;
+
+}
+
+
+.editor-field label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ddd;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+}
+
+
+.editor-field input,
+.editor-field textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background:
+        #0a0a0a;
+
+    color:
+        white;
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+
+}
+
+
+.editor-field textarea {
+
+    resize: vertical;
+
+    line-height: 1.7;
+
+}
+
+
+.editor-field input:focus,
+.editor-field textarea:focus {
+
+    border-color:
+        rgba(
+            139,
+            92,
+            246,
+            0.7
+        );
+
+}
+
+
+.editor-two-column {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.editor-toggle {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin:
+        10px 0
+        25px;
+
+    color:
+        var(--muted);
+
+    font-size: 0.8rem;
+
+}
+
+
+.editor-toggle input {
+
+    width: 16px;
+    height: 16px;
+
+    accent-color:
+        var(--accent);
+
+}
+
+
+.save-button {
+
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        var(--accent);
+
+    color: white;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.save-button:hover {
+
+    background:
+        var(--accent-light);
+
+}
+
+
+.save-button:disabled {
+
+    opacity: 0.6;
+
+    cursor:
+        not-allowed;
+
+}
+
+
+.save-message {
+
+    min-height: 20px;
+
+    margin-bottom: 12px;
+
+    font-size: 0.75rem;
+
+}
+
+
+.save-message.success {
+
+    color:
+        #4ade80;
+
+}
+
+
+.save-message.error {
+
+    color:
+        #f87171;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .admin-editor {
+
+        width:
+            calc(100% - 25px);
+
+        padding-top: 30px;
+
+    }
+
+    .editor-header {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+    .editor-header h1 {
+
+        font-size:
+            2.3rem;
+
+    }
+
+    .editor-form {
+
+        padding:
+            20px;
+
+    }
+
+    .editor-two-column {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 0;
+
+    }
+
+}
+/* =====================================================
+   ABOUT EDITOR EXTRAS
+===================================================== */
+
+.editor-subtitle {
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 0.8rem;
+
+    line-height: 1.6;
+}
+
+
+.editor-header-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.editor-view,
+.editor-back {
+    padding:
+        10px
+        14px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 7px;
+
+    color: var(--text);
+
+    font-size: 0.7rem;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.editor-view:hover,
+.editor-back:hover {
+    border-color: var(--accent);
+
+    background:
+        rgba(139, 92, 246, 0.06);
+}
+
+
+/* =====================================================
+   EDITOR SECTION TITLES
+===================================================== */
+
+.editor-section-title {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin:
+        45px
+        0
+        25px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+}
+
+
+.editor-section-title:first-child {
+    margin-top: 0;
+}
+
+
+.editor-section-title > span {
+
+    color:
+        var(--accent-light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.65rem;
+
+    padding-top: 4px;
+}
+
+
+.editor-section-title h2 {
+
+    font-size: 1.05rem;
+
+    margin-bottom: 5px;
+}
+
+
+.editor-section-title p {
+
+    color:
+        var(--muted);
+
+    font-size: 0.7rem;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   FIELD HELP TEXT
+===================================================== */
+
+.editor-field small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color:
+        #666;
+
+    font-size: 0.65rem;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TOGGLE
+===================================================== */
+
+.editor-toggle {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background:
+        rgba(139, 92, 246, 0.04);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 9px;
+
+    cursor: pointer;
+}
+
+
+.editor-toggle input {
+
+    width: 17px;
+    height: 17px;
+
+    margin-top: 2px;
+
+    flex-shrink: 0;
+
+    accent-color:
+        var(--accent);
+
+}
+
+
+.toggle-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.toggle-content strong {
+
+    color:
+        var(--text);
+
+    font-size: 0.8rem;
+
+}
+
+
+.toggle-content small {
+
+    color:
+        var(--muted);
+
+    font-size: 0.65rem;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.editor-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid
+        var(--border);
+}
+
+
+.cancel-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding:
+        0
+        20px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 8px;
+
+    color:
+        var(--muted);
+
+    font-size: 0.75rem;
+
+}
+
+
+.cancel-button:hover {
+
+    color:
+        #ffffff;
+
+    border-color:
+        rgba(255, 255, 255, 0.2);
+
+}
+
+
+.editor-actions .save-button {
+
+    width: auto;
+
+    min-width: 170px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding:
+        0
+        18px;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .editor-header-actions {
+
+        width: 100%;
+
+    }
+
+    .editor-view,
+    .editor-back {
+
+        flex: 1;
+
+        text-align: center;
+
+    }
+
+    .editor-section-title {
+
+        margin-top: 35px;
+
+    }
+
+    .editor-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+    .cancel-button,
+    .editor-actions .save-button {
+
+        width: 100%;
+
+    }
+
+}
+/* =====================================================
+   PROJECT MANAGER
+===================================================== */
+
+.project-manager {
+    margin-top: 60px;
+}
+
+
+.editor-form select {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 14px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background:
+        #0a0a0a;
+
+    color:
+        white;
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+}
+
+
+.editor-form select:focus {
+    border-color:
+        rgba(
+            139,
+            92,
+            246,
+            0.7
+        );
+}
+
+
+.admin-project-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.admin-project-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 24px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.admin-project-card:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(
+            139,
+            92,
+            246,
+            0.35
+        );
+}
+
+
+.admin-project-category {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color:
+        var(--accent-light);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+.admin-project-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 1rem;
+}
+
+
+.admin-project-card p {
+    max-width: 650px;
+
+    margin-bottom: 12px;
+
+    color:
+        var(--muted);
+
+    font-size: 0.75rem;
+
+    line-height: 1.6;
+}
+
+
+.admin-project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.admin-project-tech span {
+    padding:
+        5px
+        8px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 5px;
+
+    color:
+        var(--muted);
+
+    font-size: 0.6rem;
+}
+
+
+.admin-project-actions {
+    display: flex;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+.admin-project-actions button {
+    padding:
+        9px
+        13px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 6px;
+
+    background:
+        transparent;
+
+    color:
+        white;
+
+    font-family: inherit;
+
+    font-size: 0.65rem;
+
+    cursor: pointer;
+}
+
+
+.admin-project-actions button:hover {
+    border-color:
+        var(--accent);
+}
+
+
+.admin-project-actions
+.delete-project:hover {
+    border-color:
+        #ef4444;
+
+    color:
+        #f87171;
+}
+
+
+.empty-projects {
+    padding: 40px;
+
+    text-align: center;
+
+    color:
+        var(--muted);
+
+    background:
+        var(--surface);
+
+    border:
+        1px dashed
+        var(--border);
+
+    border-radius: 12px;
+
+    font-size: 0.8rem;
+}
+
+
+@media (max-width: 650px) {
+
+    .admin-project-card {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+    }
+
+    .admin-project-actions {
+        width: 100%;
+    }
+
+    .admin-project-actions button {
+        flex: 1;
+    }
+
+}

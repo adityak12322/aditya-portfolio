@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Edit About — Aditya</title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css">
+
+</head>
+
+
+<body>
+
+<main class="admin-editor">
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <header class="editor-header">
+
+        <div>
+
+            <p class="dashboard-label">
+                PORTFOLIO ADMIN
+            </p>
+
+            <h1>
+                Edit About
+            </h1>
+
+            <p class="editor-subtitle">
+                Update your personal and professional information.
+            </p>
+
+        </div>
+
+
+        <div class="editor-header-actions">
+
+            <a
+                href="../index.html"
+                target="_blank"
+                class="editor-view">
+                View Portfolio ↗
+            </a>
+
+            <a
+                href="dashboard.html"
+                class="editor-back">
+                ← Dashboard
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+         PROFILE FORM
+    ================================================== -->
+
+    <form
+        id="profileForm"
+        class="editor-form">
+
+
+        <!-- =================================================
+             BASIC INFORMATION
+        ================================================== -->
+
+        <div class="editor-section-title">
+
+            <span>
+                01
+            </span>
+
+            <div>
+
+                <h2>
+                    Basic Information
+                </h2>
+
+                <p>
+                    Information displayed across your portfolio.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAME -->
+
+        <div class="editor-field">
+
+            <label for="name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Aditya Kumar"
+                autocomplete="name"
+                required>
+
+        </div>
+
+
+        <!-- HEADLINE -->
+
+        <div class="editor-field">
+
+            <label for="headline">
+                Professional Headline
+            </label>
+
+            <input
+                type="text"
+                id="headline"
+                placeholder="Developer • Data Analyst • QA / Testing">
+
+            <small>
+                Example: Developer • Data Analyst • QA / Testing
+            </small>
+
+        </div>
+
+
+        <!-- SUMMARY -->
+
+        <div class="editor-field">
+
+            <label for="summary">
+                Professional Summary
+            </label>
+
+            <textarea
+                id="summary"
+                rows="8"
+                placeholder="Write your professional summary here..."></textarea>
+
+            <small>
+                This will be displayed in your About section.
+            </small>
+
+        </div>
+
+
+        <!-- =================================================
+             CONTACT INFORMATION
+        ================================================== -->
+
+        <div class="editor-section-title">
+
+            <span>
+                02
+            </span>
+
+            <div>
+
+                <h2>
+                    Contact Information
+                </h2>
+
+                <p>
+                    Used throughout your contact and profile sections.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="editor-two-column">
+
+
+            <!-- LOCATION -->
+
+            <div class="editor-field">
+
+                <label for="location">
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Greater Noida, India">
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="editor-field">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="your@email.com"
+                    autocomplete="email">
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div class="editor-field">
+
+            <label for="phone">
+                Phone
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="+91 XXXXX XXXXX"
+                autocomplete="tel">
+
+        </div>
+
+
+        <!-- =================================================
+             PROFILE & RESUME
+        ================================================== -->
+
+        <div class="editor-section-title">
+
+            <span>
+                03
+            </span>
+
+            <div>
+
+                <h2>
+                    Profile & Resume
+                </h2>
+
+                <p>
+                    Add your profile image and current resume.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFILE IMAGE -->
+
+        <div class="editor-field">
+
+            <label for="profileImage">
+                Profile Image URL
+            </label>
+
+            <input
+                type="url"
+                id="profileImage"
+                placeholder="https://example.com/profile.jpg">
+
+            <small>
+                You can later use a hosted image,
+                Cloudinary URL or another public image URL.
+            </small>
+
+        </div>
+
+
+        <!-- RESUME -->
+
+        <div class="editor-field">
+
+            <label for="resumeUrl">
+                Resume URL
+            </label>
+
+            <input
+                type="url"
+                id="resumeUrl"
+                placeholder="Google Drive / hosted PDF link">
+
+            <small>
+                This will be used by your Resume buttons.
+            </small>
+
+        </div>
+
+
+        <!-- =================================================
+             AVAILABILITY
+        ================================================== -->
+
+        <div class="editor-section-title">
+
+            <span>
+                04
+            </span>
+
+            <div>
+
+                <h2>
+                    Availability
+                </h2>
+
+                <p>
+                    Control whether your portfolio shows that
+                    you are open to opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <label class="editor-toggle">
+
+            <input
+                type="checkbox"
+                id="availableForWork">
+
+            <span class="toggle-content">
+
+                <strong>
+                    Currently available for work
+                </strong>
+
+                <small>
+                    Show that you're open to jobs,
+                    internships and opportunities.
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <!-- =================================================
+             SAVE STATUS
+        ================================================== -->
+
+        <div
+            id="saveMessage"
+            class="save-message"
+            role="status"
+            aria-live="polite">
+        </div>
+
+
+        <!-- =================================================
+             ACTIONS
+        ================================================== -->
+
+        <div class="editor-actions">
+
+            <a
+                href="dashboard.html"
+                class="cancel-button">
+                Cancel
+            </a>
+
+
+            <button
+                type="submit"
+                class="save-button"
+                id="saveButton">
+
+                <span>
+                    Save Changes
+                </span>
+
+                <b>
+                    →
+                </b>
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+</main>
+
+
+<script src="about.js"></script>
+
+</body>
+
+</html>
