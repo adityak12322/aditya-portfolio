@@ -72,7 +72,7 @@ async function loadSettings() {
 
         const response =
             await fetch(
-                "http://aditya-portfolio-backend-jsib.onrender.com/api/settings"
+                "https://aditya-portfolio-backend-jsib.onrender.com/api/settings"
             );
 
 
@@ -182,7 +182,7 @@ form.addEventListener(
 
             const response =
                 await fetch(
-                    "http://aditya-portfolio-backend-jsib.onrender.com/api/settings",
+                    "https://aditya-portfolio-backend-jsib.onrender.com/api/settings",
                     {
 
                         method:

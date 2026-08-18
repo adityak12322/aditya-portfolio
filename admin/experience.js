@@ -122,7 +122,7 @@ async function loadExperience() {
 
         const response =
             await fetch(
-                "http://aditya-portfolio-backend-jsib.onrender.com/api/experience"
+                "https://aditya-portfolio-backend-jsib.onrender.com/api/experience"
             );
 
 
@@ -350,9 +350,9 @@ form.addEventListener(
             const url =
                 editing
 
-                    ? `http://aditya-portfolio-backend-jsib.onrender.com/api/experience/${id}`
+                    ? `https://aditya-portfolio-backend-jsib.onrender.com/api/experience/${id}`
 
-                    : "http://aditya-portfolio-backend-jsib.onrender.com/api/experience";
+                    : "https://aditya-portfolio-backend-jsib.onrender.com/api/experience";
 
 
             const response =
@@ -448,7 +448,7 @@ async function editExperience(id) {
 
         const response =
             await fetch(
-                `http://aditya-portfolio-backend-jsib.onrender.com/api/experience/${id}`
+                `https://aditya-portfolio-backend-jsib.onrender.com/api/experience/${id}`
             );
 
 
@@ -573,7 +573,7 @@ async function deleteExperience(id) {
 
         const response =
             await fetch(
-                `http://aditya-portfolio-backend-jsib.onrender.com/api/experience/${id}`,
+                `https://aditya-portfolio-backend-jsib.onrender.com/api/experience/${id}`,
                 {
 
                     method:

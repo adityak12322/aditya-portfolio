@@ -107,7 +107,7 @@ async function loadCredentials() {
 
         const response =
             await fetch(
-                "http://aditya-portfolio-backend-jsib.onrender.com/api/credentials"
+                "https://aditya-portfolio-backend-jsib.onrender.com/api/credentials"
             );
 
 
@@ -354,9 +354,9 @@ form.addEventListener(
             const url =
                 editing
 
-                    ? `http://aditya-portfolio-backend-jsib.onrender.com/api/credentials/${id}`
+                    ? `https://aditya-portfolio-backend-jsib.onrender.com/api/credentials/${id}`
 
-                    : "http://aditya-portfolio-backend-jsib.onrender.com/api/credentials";
+                    : "https://aditya-portfolio-backend-jsib.onrender.com/api/credentials";
 
 
             const response =
@@ -453,7 +453,7 @@ async function editCredential(id) {
 
         const response =
             await fetch(
-                `http://aditya-portfolio-backend-jsib.onrender.com/api/credentials/${id}`
+                `https://aditya-portfolio-backend-jsib.onrender.com/api/credentials/${id}`
             );
 
 
@@ -567,7 +567,7 @@ async function deleteCredential(id) {
 
         const response =
             await fetch(
-                `http://aditya-portfolio-backend-jsib.onrender.com/api/credentials/${id}`,
+                `https://aditya-portfolio-backend-jsib.onrender.com/api/credentials/${id}`,
                 {
 
                     method:

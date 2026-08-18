@@ -14,7 +14,7 @@ async function loadPublicSocialLinks() {
 
         const response =
             await fetch(
-                "http://aditya-portfolio-backend-jsib.onrender.com/api/social"
+                "https://aditya-portfolio-backend-jsib.onrender.com/api/social"
             );
 
 

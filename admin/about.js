@@ -64,7 +64,7 @@ async function loadProfile() {
 
         const response =
             await fetch(
-                "http://aditya-portfolio-backend-jsib.onrender.com/api/profile"
+                "https://aditya-portfolio-backend-jsib.onrender.com/api/profile"
             );
 
 
@@ -180,7 +180,7 @@ form.addEventListener(
 
             const response =
                 await fetch(
-                    "http://aditya-portfolio-backend-jsib.onrender.com/api/profile",
+                    "https://aditya-portfolio-backend-jsib.onrender.com/api/profile",
                     {
 
                         method: "PUT",

@@ -95,7 +95,7 @@ loginForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://aditya-portfolio-backend-jsib.onrender.com/api/auth/login",
+                    "https://aditya-portfolio-backend-jsib.onrender.com/api/auth/login",
                     {
 
                         method: "POST",

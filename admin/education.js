@@ -117,7 +117,7 @@ async function loadEducation() {
 
         const response =
             await fetch(
-                "http://aditya-portfolio-backend-jsib.onrender.com/api/education"
+                "https://aditya-portfolio-backend-jsib.onrender.com/api/education"
             );
 
         const data =
@@ -358,9 +358,9 @@ form.addEventListener(
             const url =
                 editing
 
-                    ? `http://aditya-portfolio-backend-jsib.onrender.com/api/education/${id}`
+                    ? `https://aditya-portfolio-backend-jsib.onrender.com/api/education/${id}`
 
-                    : "http://aditya-portfolio-backend-jsib.onrender.com/api/education";
+                    : "https://aditya-portfolio-backend-jsib.onrender.com/api/education";
 
 
             const response =
@@ -457,7 +457,7 @@ async function editEducation(id) {
 
         const response =
             await fetch(
-                `http://aditya-portfolio-backend-jsib.onrender.com/api/education/${id}`
+                `https://aditya-portfolio-backend-jsib.onrender.com/api/education/${id}`
             );
 
 
@@ -575,7 +575,7 @@ async function deleteEducation(id) {
 
         const response =
             await fetch(
-                `http://aditya-portfolio-backend-jsib.onrender.com/api/education/${id}`,
+                `https://aditya-portfolio-backend-jsib.onrender.com/api/education/${id}`,
                 {
 
                     method:

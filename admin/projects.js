@@ -104,7 +104,7 @@ async function loadProjects() {
 
         const response =
             await fetch(
-                "http://aditya-portfolio-backend-jsib.onrender.com/api/projects"
+                "https://aditya-portfolio-backend-jsib.onrender.com/api/projects"
             );
 
 
@@ -320,9 +320,9 @@ form.addEventListener(
             const url =
                 isEditing
 
-                    ? `http://aditya-portfolio-backend-jsib.onrender.com/api/projects/${projectId}`
+                    ? `https://aditya-portfolio-backend-jsib.onrender.com/api/projects/${projectId}`
 
-                    : "http://aditya-portfolio-backend-jsib.onrender.com/api/projects";
+                    : "https://aditya-portfolio-backend-jsib.onrender.com/api/projects";
 
 
             const method =
@@ -421,7 +421,7 @@ async function editProject(id) {
 
         const response =
             await fetch(
-                `http://aditya-portfolio-backend-jsib.onrender.com/api/projects/${id}`
+                `https://aditya-portfolio-backend-jsib.onrender.com/api/projects/${id}`
             );
 
 
@@ -552,7 +552,7 @@ async function deleteProject(id) {
 
         const response =
             await fetch(
-                `http://aditya-portfolio-backend-jsib.onrender.com/api/projects/${id}`,
+                `https://aditya-portfolio-backend-jsib.onrender.com/api/projects/${id}`,
                 {
 
                     method: "DELETE",

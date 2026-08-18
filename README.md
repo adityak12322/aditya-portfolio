@@ -81,7 +81,7 @@ node server.js
 
 The API will run on:
 
-http://aditya-portfolio-backend-jsib.onrender.com
+https://aditya-portfolio-backend-jsib.onrender.com
 
 ## 🔗 API Endpoints
 
@@ -197,7 +197,7 @@ The frontend communicates with this backend through REST APIs.
 
 Example:
 
-fetch("http://aditya-portfolio-backend-jsib.onrender.com/api/projects")
+fetch("https://aditya-portfolio-backend-jsib.onrender.com/api/projects")
 
 After deployment, the frontend will use the production backend URL.
 

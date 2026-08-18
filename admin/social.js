@@ -48,7 +48,7 @@ async function loadSocial() {
 
         const response =
             await fetch(
-                "http://aditya-portfolio-backend-jsib.onrender.com/api/social"
+                "https://aditya-portfolio-backend-jsib.onrender.com/api/social"
             );
 
 
@@ -137,7 +137,7 @@ form.addEventListener(
 
             const response =
                 await fetch(
-                    "http://aditya-portfolio-backend-jsib.onrender.com/api/social",
+                    "https://aditya-portfolio-backend-jsib.onrender.com/api/social",
                     {
 
                         method:
