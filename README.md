@@ -1,164 +1,208 @@
-# Aditya Kumar — Portfolio Backend
+# 🚀 Aditya Kumar — Personal Portfolio
 
-Backend API for my personal portfolio website, built with Node.js, Express.js and MongoDB.
+> An interactive, responsive and modern personal portfolio website built to showcase my skills, projects, experience, certifications and academic journey across Full Stack Development, Data Analytics and Software Testing.
 
-This backend powers the portfolio's dynamic content and admin panel, allowing portfolio information to be managed without modifying the frontend code.
+---
 
-## 🚀 Features
+## 🌐 Live Website
 
-- Admin authentication with JWT
-- Profile / About management
-- Project management
-- Experience & internship management
-- Certificates & credentials management
-- Education management
-- Social media links management
-- Portfolio settings management
-- MongoDB database integration
-- RESTful API architecture
-- Protected admin routes
-- CORS enabled
-- Environment variable configuration
+🔗 **Portfolio:**  
+https://your-portfolio-live-url.com
 
-## 🛠️ Tech Stack
+> The portfolio is currently under active development.
 
+---
+
+## 📌 About The Project
+
+This is my personal developer portfolio designed to provide recruiters and visitors with a complete overview of my technical skills, projects, education, certifications and professional journey.
+
+Instead of creating a simple static resume website, the goal is to build a **dynamic portfolio platform** where all important information can eventually be managed through a secure Admin Dashboard.
+
+The final system will allow me to update my portfolio without modifying the frontend source code.
+
+---
+
+# ✨ Features
+
+## 🏠 Interactive Hero Section
+
+- Modern dark-themed UI
+- Animated introduction
+- Dynamic professional roles
+- Interactive visual elements
+- Smooth scrolling
+- Responsive design
+- Call-to-action buttons
+
+Current professional focus:
+
+- Full Stack Development
+- Data Analytics
+- QA / Software Testing
+
+---
+
+## 👨‍💻 About Me
+
+A dedicated section introducing my background, interests and technical focus.
+
+The section highlights:
+
+- Computer Science background
+- Full Stack Development
+- Data Analytics
+- Software Testing
+- Current technical interests
+- Career goals
+
+---
+
+# 🛠️ Skills
+
+Skills are organized into interactive categories.
+
+### Development
+
+- HTML
+- CSS
+- JavaScript
+- React.js
 - Node.js
 - Express.js
 - MongoDB
-- Mongoose
-- JWT Authentication
 - REST APIs
+- Git
+- GitHub
 
-## 📁 Project Structure
+### Data Analytics
 
-backend/
-├── config/
-├── models/
-├── routes/
-├── server.js
-├── package.json
-├── package-lock.json
-└── .gitignore
+- Excel
+- SQL
+- Power BI
+- Python
+- Data Cleaning
+- Data Analysis
+- Data Visualization
+- Reporting
 
-## ⚙️ Installation
+### QA / Testing
 
-Clone the repository:
+- Manual Testing
+- Functional Testing
+- SDLC
+- STLC
+- Test Case Writing
+- Debugging
+- API Testing
 
-git clone YOUR_GITHUB_REPOSITORY_URL
+---
 
-Go to the project folder:
+# 🚀 Projects
 
-cd aditya-portfolio-backend
+The portfolio includes a dedicated project showcase with category-based filtering.
 
-Install dependencies:
+Projects will contain:
 
-npm install
+- Project name
+- Project description
+- Project screenshot
+- Technology stack
+- Live Demo
+- GitHub Repository
 
-## 🔐 Environment Variables
+### Current Project Categories
 
-Create a `.env` file in the root directory:
+- Development
+- Data Analytics
+- Testing
 
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+Project information will eventually be managed from the Admin Dashboard.
 
-IMPORTANT: Never upload `.env` to GitHub.
+---
 
-Your `.gitignore` should contain:
+# 💼 Experience
 
-.env
-node_modules/
+A dedicated section will showcase internships and professional experience.
 
-## ▶️ Run Locally
+Each experience entry can include:
 
-Start the development server:
+- Company
+- Position
+- Duration
+- Description
+- Technologies / Skills
+- Internship certificate
+- Supporting documents
 
-npm run dev
+---
 
-Or:
+# 🏆 Certifications
 
-node server.js
+The portfolio will contain an interactive certificate gallery.
 
-The API will run on:
+Certificates can include:
 
-https://aditya-portfolio-backend-jsib.onrender.com
+- Technical certifications
+- Internship certificates
+- Course certificates
+- Achievement certificates
+- College certificates
+- Other relevant credentials
 
-## 🔗 API Endpoints
+Each certificate can contain:
 
-### Authentication
+- Certificate title
+- Issuing organization
+- Date
+- Certificate image
+- External document / Google Drive link
 
-POST /api/auth/login
+Certificates will be clickable so visitors can view the original document.
 
-Used for admin authentication.
+---
 
-### Profile
+# 🎓 Education
 
-GET /api/profile
-PUT /api/profile
+The Education section will showcase my academic background.
 
-Manages:
+### Bachelor of Technology
 
-- Name
-- Headline
-- Summary
-- Location
-- Email
-- Phone
-- Profile image
-- Resume URL
-- Availability
+**Computer Science & Information Technology**
 
-### Projects
+**Dronacharya Group of Institutions, Greater Noida**
 
-GET /api/projects
-POST /api/projects
-PUT /api/projects/:id
-DELETE /api/projects/:id
+Affiliated with:
 
-Manages project title, description, category, technology stack, images, GitHub links and live demo links.
+**Dr. A.P.J. Abdul Kalam Technical University (AKTU)**
 
-### Experience
+The portfolio will also support academic documents such as:
 
-GET /api/experience
-POST /api/experience
-PUT /api/experience/:id
-DELETE /api/experience/:id
-
-Supports internships, work experience, training and freelance experience.
-
-### Credentials
-
-GET /api/credentials
-POST /api/credentials
-PUT /api/credentials/:id
-DELETE /api/credentials/:id
-
-Supports:
-
-- Certificates
-- Internship Certificates
-- LOR
 - Degree
-- PDC
-- Achievements
-- Courses
-- Other credentials
+- Mark sheets
+- College certificates
+- Other academic documents
 
-### Education
+---
 
-GET /api/education
-POST /api/education
-PUT /api/education/:id
-DELETE /api/education/:id
+# 📄 Resume
 
-Manages academic information and document links.
+The portfolio will provide access to my latest resume.
 
-### Social Links
+Visitors will be able to:
 
-GET /api/social
-PUT /api/social
+- View Resume
+- Download Resume
 
-Supports:
+The resume will eventually be replaceable directly from the Admin Dashboard.
+
+---
+
+# 🔗 Social Media
+
+The portfolio will provide direct access to my social profiles.
+
+Supported platforms:
 
 - GitHub
 - LinkedIn
@@ -167,79 +211,151 @@ Supports:
 - Facebook
 - X
 - Email
-- Phone
 
-### Settings
+Each platform will have its respective icon and clickable link.
 
-GET /api/settings
-PUT /api/settings
+---
 
-Controls:
+# 📬 Contact
 
-- Portfolio title
-- Availability status
-- Availability message
-- Email visibility
-- Phone visibility
-- Footer year
+A dedicated contact section will allow visitors and recruiters to connect with me.
 
-## 🔒 Authentication
+The final version will support:
 
-Admin update operations are protected using JWT authentication.
+- Email
+- LinkedIn
+- GitHub
+- WhatsApp
+- Contact Form
 
-Protected requests use:
+---
 
-Authorization: Bearer YOUR_JWT_TOKEN
+# 🔐 Admin Dashboard
 
-## 🌐 Frontend Integration
+One of the main goals of this project is to make the portfolio completely manageable without editing source code.
 
-The frontend communicates with this backend through REST APIs.
+A secure Admin Dashboard will be developed as part of the backend.
 
-Example:
+### Admin will be able to manage:
 
-fetch("https://aditya-portfolio-backend-jsib.onrender.com/api/projects")
+### Profile
 
-After deployment, the frontend will use the production backend URL.
+- Name
+- Profile image
+- About
+- Professional summary
+- Location
+- Email
+- Resume
 
-## 🗄️ Database
+### Skills
 
-The application uses MongoDB with Mongoose.
+- Add skill
+- Edit skill
+- Delete skill
+- Change category
+- Reorder skills
 
-MongoDB stores:
+### Projects
 
-- Profile
-- Projects
-- Experience
-- Credentials
-- Education
-- Social links
-- Settings
-- Admin authentication data
+- Add project
+- Edit project
+- Delete project
+- Upload project image
+- Add project description
+- Add technologies
+- Add Live Demo URL
+- Add GitHub URL
+- Select project category
 
-## 🔮 Future Improvements
+### Experience
 
-- Cloudinary image uploads
-- Admin analytics dashboard
-- Contact form with email notifications
-- Visitor analytics
-- Resume download tracking
-- Role-based admin access
-- API rate limiting
-- Production logging
-- Automated deployment
+- Add internship
+- Edit internship
+- Delete internship
+- Add company
+- Add role
+- Add duration
+- Add description
+- Add certificate
 
-## 👨‍💻 Author
+### Certifications
 
-Aditya Kumar
+- Add certificate
+- Upload certificate image
+- Add issuer
+- Add date
+- Add external document link
+- Edit certificate
+- Delete certificate
 
-Computer Science & Information Technology Graduate
+### Education
 
-Focus Areas:
+- Add degree
+- Add institution
+- Add academic documents
+- Add document links
 
-- Data Analytics
-- Full Stack Development
-- QA / Software Testing
+### Social Links
 
-## 📄 License
+- GitHub
+- LinkedIn
+- Instagram
+- WhatsApp
+- Facebook
+- X
+- Email
 
-This project is created for personal portfolio and professional showcase purposes.
+---
+
+# 🧠 System Architecture
+
+The final project will follow a full-stack architecture.
+
+```text
+                    ┌───────────────────────┐
+                    │       VISITOR         │
+                    │      / RECRUITER      │
+                    └───────────┬───────────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │       FRONTEND        │
+                    │    HTML / CSS / JS    │
+                    └───────────┬───────────┘
+                                │
+                           REST API
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │        BACKEND        │
+                    │    Node.js + Express  │
+                    └───────────┬───────────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │       DATABASE        │
+                    │        MongoDB        │
+                    └───────────────────────┘
+
+
+                         ADMIN SIDE
+
+                    ┌───────────────────────┐
+                    │      ADMIN LOGIN      │
+                    └───────────┬───────────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │    ADMIN DASHBOARD    │
+                    └───────────┬───────────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │        BACKEND        │
+                    └───────────┬───────────┘
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │        MongoDB        │
+                    └───────────────────────┘
